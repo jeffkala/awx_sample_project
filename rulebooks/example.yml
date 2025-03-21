@@ -14,4 +14,5 @@
       # Action is triggered if condition is `true`.
       action:
         # For simple examples just print the event as a debug message.
-        debug:
+        print_event:
+          pretty: true
