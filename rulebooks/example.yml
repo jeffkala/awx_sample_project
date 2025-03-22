@@ -10,7 +10,7 @@
 
   rules:
     - name: "New changelog created"
-      condition: "event.id is defined"
+      condition: "event.meta is defined"
       # Action is triggered if condition is `true`.
       action:
         # For simple examples just print the event as a debug message.
