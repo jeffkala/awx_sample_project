@@ -15,4 +15,9 @@
         run_job_template:
           name: "Interface Change"
           organization: "Default"
+          include_events: true
+          job_args:
+            extra_vars:
+              interface_name: "{{ event.name }}"
+              interface_state: "{{ event.enabled }}"
 
