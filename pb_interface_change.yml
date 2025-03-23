@@ -1,11 +1,10 @@
 ---
 - name: "CONFIGURE PROPER INTERFACE STATUS"
-  gather_facts: false
   hosts: ceos-01
   tasks:
     - name: "DEBUG"
       ansible.builtin.debug:
-        var: hostvars[inventory_hostname]
+        msg: "{{ events }}" 
     - name: "Merge interface admin state"
       arista.eos.eos_interfaces:
         config:

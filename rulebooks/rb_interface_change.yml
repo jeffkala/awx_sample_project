@@ -11,13 +11,14 @@
   rules:
     - name: "Find Interface based changelogs"
       condition: "event.meta is defined"
-      action:
-        run_job_template:
-          name: "Interface Change"
-          organization: "Default"
-          include_events: true
-          job_args:
-            extra_vars:
-              interface_name: "{{ event.name }}"
-              interface_state: "{{ event.enabled }}"
+      actions:
+        - debug:
+            msg: "{{ event }}"
+        - run_job_template:
+            name: "Interface Change"
+            organization: "Default"
+              #job_args:
+              #extra_vars:
+              #interface_name: "{{ event.name }}"
+              #  interface_state: "{{ event.enabled }}"
 
