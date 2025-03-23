@@ -10,15 +10,15 @@
 
   rules:
     - name: "Find Interface based changelogs"
-      condition: "event.meta is defined"
+      condition: "event.mac_address is defined"
       actions:
         - debug:
             msg: "{{ event }}"
         - run_job_template:
             name: "Interface Change"
             organization: "Default"
-              #job_args:
-              #extra_vars:
-              #interface_name: "{{ event.name }}"
-              #  interface_state: "{{ event.enabled }}"
+              job_args:
+                extra_vars:
+                interface_name: "{{ event.name }}"
+                interface_state: "{{ event.enabled }}"
 
