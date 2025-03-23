@@ -4,7 +4,7 @@
   tasks:
     - name: "DEBUG"
       ansible.builtin.debug:
-        msg: "{{ event }}" 
+        var: hostvars[inventory_hostname] 
     - name: "Merge interface admin state"
       arista.eos.eos_interfaces:
         config:
