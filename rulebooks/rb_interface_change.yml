@@ -3,11 +3,11 @@
   hosts: "localhost"
   sources:
     - networktocode.nautobot.nautobot_changelog:
-        instance: "https://159.223.200.74:8443"
+        instance: "http://159.223.200.74:8080"
         token: "0123456789abcdef0123456789abcdef01234567"
         interval: 5
         query: ""
-        verify: false
+        ssl_verify: false
 
   rules:
     - name: "Find Interface based changelogs"
