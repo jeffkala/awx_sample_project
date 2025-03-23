@@ -11,10 +11,8 @@
   rules:
     - name: "Find Interface based changelogs"
       condition: "event.mac_address is defined"
-      actions:
-        - debug:
-            msg: "{{ event }}"
-        - run_job_template:
-            name: "Interface Change"
-            organization: "Default"
+      action:
+        run_job_template:
+          name: "Interface Change"
+           organization: "Default"
 

@@ -2,11 +2,6 @@
 - name: "CONFIGURE PROPER INTERFACE STATUS"
   hosts: ceos-01
   tasks:
-    - name: "DEBUG"
-      ansible.builtin.debug:
-        var: hostvars[inventory_hostname]
-    - ansible.builtin.debug:
-        msg: "{{ ansible_eda.event }}" 
     - name: "Merge interface admin state"
       arista.eos.eos_interfaces:
         config:
