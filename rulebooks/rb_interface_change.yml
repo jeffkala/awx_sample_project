@@ -7,7 +7,6 @@
         token: "0123456789abcdef0123456789abcdef01234567"
         interval: 5
         query: ""
-        ssl_verify: false
 
   rules:
     - name: "Find Interface based changelogs"
