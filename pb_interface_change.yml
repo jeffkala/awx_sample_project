@@ -1,6 +1,7 @@
 ---
 - name: "CONFIGURE PROPER INTERFACE STATUS"
   gather_facts: false
+  hosts: arista_ceos
   tasks:
     - name: "Merge interface admin state"
       arista.eos.eos_interfaces:
