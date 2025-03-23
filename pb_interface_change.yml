@@ -10,7 +10,7 @@
     - name: "Merge interface admin state"
       arista.eos.eos_interfaces:
         config:
-          - name: "{{ interface_name }}"
-            enabled: "{{ interface_state }}"
+          - name: "{{ ansible_eda.event.name }}"
+            enabled: "{{ ansible_eda.event.enabled }}"
         state: merged
 
