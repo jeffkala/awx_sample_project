@@ -1,0 +1,11 @@
+---
+- name: "CONFIGURE PROPER INTERFACE STATUS"
+  gather_facts: false
+  tasks:
+    - name: "Merge interface admin state"
+      arista.eos.eos_interfaces:
+        config:
+          - name: "{{ event.interface }}"
+            enabled: "{{ event.admin_state }}"
+        state: merged
+
